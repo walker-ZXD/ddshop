@@ -2,7 +2,36 @@
 <module type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/dd-common/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-common/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-common/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-common/src/test/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-manager/dd-manager-dao/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-manager/dd-manager-dao/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-manager/dd-manager-dao/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-manager/dd-manager-dao/src/test/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-manager/dd-manager-interface/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-manager/dd-manager-interface/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-manager/dd-manager-interface/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-manager/dd-manager-interface/src/test/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-manager/dd-manager-pojo/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-manager/dd-manager-pojo/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-manager/dd-manager-pojo/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-manager/dd-manager-pojo/src/test/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-manager/dd-manager-service/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-manager/dd-manager-service/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-manager/dd-manager-service/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-manager/dd-manager-service/src/test/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-manager/dd-manager-web/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-manager/dd-manager-web/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-manager/dd-manager-web/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-manager/dd-manager-web/src/test/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-parent/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-parent/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-parent/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/dd-parent/src/test/resources" type="java-test-resource" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
