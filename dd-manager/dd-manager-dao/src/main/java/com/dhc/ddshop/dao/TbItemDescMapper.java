@@ -2,8 +2,9 @@ package com.dhc.ddshop.dao;
 
 import com.dhc.ddshop.pojo.po.TbItemDesc;
 import com.dhc.ddshop.pojo.po.TbItemDescExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface TbItemDescMapper {
     int countByExample(TbItemDescExample example);

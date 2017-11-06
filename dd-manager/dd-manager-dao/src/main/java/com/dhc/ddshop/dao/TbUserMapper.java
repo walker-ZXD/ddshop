@@ -2,8 +2,9 @@ package com.dhc.ddshop.dao;
 
 import com.dhc.ddshop.pojo.po.TbUser;
 import com.dhc.ddshop.pojo.po.TbUserExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface TbUserMapper {
     int countByExample(TbUserExample example);
