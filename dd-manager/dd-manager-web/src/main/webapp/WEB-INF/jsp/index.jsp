@@ -55,7 +55,6 @@
 <script src="js/common.js"></script>
 <!-- 自定义js -->
 <script>
-    //ddshop.registerMenuEvent();
     $(function () {
         //约定大于配置：jquery对象前面加上$,如果是DOM对象不需要加$
         var $tree = $('#menu .easyui-tree');
