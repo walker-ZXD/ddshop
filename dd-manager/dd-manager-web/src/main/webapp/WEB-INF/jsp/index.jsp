@@ -55,21 +55,7 @@
 <script src="js/common.js"></script>
 <!-- 自定义js -->
 <script>
-    $(function () {
-        //约定大于配置：jquery对象前面加上$,如果是DOM对象不需要加$
-        var $tree = $('#menu .easyui-tree');
-        $tree.tree({
-            onClick:function(node){
-                var href = node.attributes.href;//item-add
-                var text = node.text;
-                $('#tab').tabs('add',{
-                    title: text,
-                    href: href,
-                    closable:true
-                });
-            }
-        });
-    });
+    ddshop.registerMenuEvent();
 </script>
 </body>
 </html>
