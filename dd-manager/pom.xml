@@ -9,9 +9,6 @@
         <relativePath>../dd-parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
-    <groupId>com.dhc.ddshop</groupId>
-    <artifactId>dd-manager</artifactId>
     <packaging>pom</packaging>
     <modules>
         <module>dd-manager-pojo</module>
@@ -20,14 +17,14 @@
         <module>dd-manager-service</module>
         <module>dd-manager-web</module>
     </modules>
+    <artifactId>dd-manager</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>com.dhc.ddshop</groupId>
-            <version>1.0-SNAPSHOT</version>
             <artifactId>dd-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
-
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -79,9 +76,7 @@
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-context-support</artifactId><version>${spring.version}</version>
+            <artifactId>spring-context-support</artifactId>
         </dependency>
     </dependencies>
-
-
 </project>

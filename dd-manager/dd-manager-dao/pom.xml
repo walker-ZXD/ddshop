@@ -8,30 +8,26 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
-    <groupId>com.dhc.ddshop</groupId>
-    <artifactId>dd-manager-dao</artifactId>
     <packaging>jar</packaging>
-
+    <artifactId>dd-manager-dao</artifactId>
 
     <dependencies>
-        <!--pojo相关包-->
+        <!--mybatis的相关包、mysql的相关包、spring的相关包（junit和spring整合进行测试）:相关包已经移动至dd-manager-->
+        <!--pojo的相关包-->
         <dependency>
             <groupId>com.dhc.ddshop</groupId>
             <artifactId>dd-manager-pojo</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-        <!--mybatis相关包、mysql的相关包、spring的相关包（junit和spring整合进行测试）相关包已经移到dd-manage中了-->
+
         <!-- mybatis -->
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
-            <version>${mybatis.version}</version>
         </dependency>
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
-            <version>${mybatis.spring.version}</version>
         </dependency>
 
         <!-- mysql -->
@@ -60,4 +56,6 @@
             </resource>
         </resources>
     </build>
+
+
 </project>

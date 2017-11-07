@@ -8,18 +8,16 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>dd-manager-interface</artifactId>
     <packaging>jar</packaging>
+    <artifactId>dd-manager-interface</artifactId>
 
-    <!--service层的依赖-->
+    <!--service层的接口依赖-->
     <dependencies>
         <dependency>
             <groupId>com.dhc.ddshop</groupId>
             <artifactId>dd-manager-pojo</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
     </dependencies>
 
 </project>
