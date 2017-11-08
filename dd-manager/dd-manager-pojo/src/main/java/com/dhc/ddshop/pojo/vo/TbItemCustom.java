@@ -10,8 +10,17 @@ import com.dhc.ddshop.pojo.po.TbItem;
  * Version:V1.0
  */
 public class TbItemCustom extends TbItem{
+    private String statusName;
 
     private String catName;
+
+    public String getStatusName() {
+        return statusName;
+    }
+
+    public void setStatusName(String statusName) {
+        this.statusName = statusName;
+    }
 
     public String getCatName() {
         return catName;

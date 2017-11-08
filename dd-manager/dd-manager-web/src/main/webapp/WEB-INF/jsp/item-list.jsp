@@ -24,6 +24,7 @@
             {field: 'id', title: '商品编号', width: 100},
             {field: 'title', title: '商品名称', width: 100},
             {field: 'sellPoint', title: '卖点', width: 100},
+            {field: 'statusName', title: '状态', width: 100},
             {field: 'catName', title: '分类名称', width: 100},
             {field: 'price', title: '价格', width: 100}
         ]]
