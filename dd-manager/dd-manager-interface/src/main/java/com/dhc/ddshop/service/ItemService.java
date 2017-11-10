@@ -5,6 +5,8 @@ import com.dhc.ddshop.common.dto.Result;
 import com.dhc.ddshop.pojo.po.TbItem;
 import com.dhc.ddshop.pojo.vo.TbItemCustom;
 
+import java.util.List;
+
 
 public interface ItemService {
 
@@ -18,4 +20,25 @@ public interface ItemService {
      * @return
      */
     Result<TbItemCustom> listItemsByPage(Page page);
+
+    /**
+     * 批量删除
+     * @param ids
+     * @return
+     */
+    int updateBatch(List<Long> ids);
+
+    /**
+     * 批量上架
+     * @param ids
+     * @return
+     */
+    int updatePutaway(List<Long> ids);
+    /**
+     * 批量下架
+     * @param ids
+     * @return
+     */
+
+    int updatePutdown(List<Long> ids);
 }
