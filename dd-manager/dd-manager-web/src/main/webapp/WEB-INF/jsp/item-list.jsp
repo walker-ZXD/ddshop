@@ -177,7 +177,13 @@
             {field: 'sellPoint', title: '卖点', width: 100},
             {field: 'statusName', title: '状态', width: 100},
             {field: 'catName', title: '分类名称', width: 100},
-            {field: 'price', title: '价格', width: 100}
+            {field: 'priceView', title: '价格', width: 100},
+            {field: 'created', title: '创建时间',formatter:function(value,row,index){
+                return moment(value).format('YYYY-MM-DD HH:mm:ss');
+            }},
+            {field: 'updated', title: '更新时间',formatter:function(value,row,index){
+                return moment(value).format('YYYY-MM-DD HH:mm:ss');
+            }}
         ]]
     });
 

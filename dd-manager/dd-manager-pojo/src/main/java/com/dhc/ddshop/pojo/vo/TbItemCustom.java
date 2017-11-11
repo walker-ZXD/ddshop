@@ -12,6 +12,7 @@ import com.dhc.ddshop.pojo.po.TbItem;
 public class TbItemCustom extends TbItem{
     private String statusName;
 
+    private String priceView;
     private String catName;
 
     public String getStatusName() {
@@ -28,5 +29,13 @@ public class TbItemCustom extends TbItem{
 
     public void setCatName(String catName) {
         this.catName = catName;
+    }
+
+    public String getPriceView() {
+        return priceView;
+    }
+
+    public void setPriceView(String priceView) {
+        this.priceView = priceView;
     }
 }
