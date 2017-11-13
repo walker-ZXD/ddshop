@@ -14,18 +14,32 @@
 
   </sql>
 
+
+  <sql id="Where_Clause" >
+    <where>
+      i.status != 3
+      <if test="query != null and query.title != null and query.title != '' ">
+        and i.title like '%${query.title}%'
+      </if>
+      <if test="query != null and query.status != null and query.status != 0 ">
+        and i.status = #{query.status}
+      </if>
+    </where>
+  </sql>
+
+
   <select id="countItems" resultType="_int">
     select count(1)
-    from tb_item
-     WHERE status != 3
+    from tb_item i
+    <include refid="Where_Clause"/>
   </select>
-  ORDER BY CONVERT(i.title USING gbk);
+
   <select id="listItemsByPage" resultType="com.dhc.ddshop.pojo.vo.TbItemCustom">
     SELECT
     <include refid="Base_Column_List" />
     FROM tb_item i
     LEFT JOIN tb_item_cat c ON i.cid = c.id
-    where i.status != 3
+    <include refid="Where_Clause"/>
     <choose>
       <when test="order != null and order.sort != null and order.order != null and order.orderParams != null">
         <foreach collection="order.orderParams" item="item" open="order by " close="" separator=",">
@@ -38,5 +52,6 @@
     </choose>
     LIMIT #{page.offset},#{page.rows}
   </select>
+
 
 </mapper>

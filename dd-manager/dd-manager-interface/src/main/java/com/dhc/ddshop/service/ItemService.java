@@ -5,6 +5,7 @@ import com.dhc.ddshop.common.dto.Page;
 import com.dhc.ddshop.common.dto.Result;
 import com.dhc.ddshop.pojo.po.TbItem;
 import com.dhc.ddshop.pojo.vo.TbItemCustom;
+import com.dhc.ddshop.pojo.vo.TbItemQuery;
 
 import java.util.List;
 
@@ -20,7 +21,7 @@ public interface ItemService {
      * @param page
      * @return
      */
-    Result<TbItemCustom> listItemsByPage(Page page,Order order);
+    Result<TbItemCustom> listItemsByPage(Page page,Order order, TbItemQuery query);
 
     /**
      * 批量删除
