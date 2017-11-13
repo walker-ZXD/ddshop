@@ -75,6 +75,42 @@
 </div>
 
 <script>
+
+    //提交表单
+    function submitForm() {
+        $('#itemAddForm').form('submit',{
+            //提交表单到item进行处理
+            url:'item',
+            //在提交表单之前触发,验证
+            onSubmit:function(){
+                //给隐藏域设值ID属性，并且设值
+                $('#price').val($('#priceView').val() * 100);
+                return $(this).form('validate')
+            },
+            //后台处理成功之后的回调函数
+            success:function (data) {
+                console.log('success');
+                if(data > 0){
+                    $.messager.alert('温馨提示','恭喜！添加商品成功！');
+                    ddshop.addTabs('查询商品', 'item-list');
+                }
+            }
+        })
+    }
+
+    //重置表单
+    function clearForm(){
+        $('#itemAddForm').form('reset');
+        ue.setContent('商品描述');
+    }
+
+    //实例化编辑器
+    var ue = UE.getEditor('container',{
+        initialFrameWidth: '100%',
+        initialFrameHeight: '400'
+    });
+
+
     //加载商品类目的树形下拉框
     $('#cid').combotree({
         url: 'itemCats?parentId=0',
