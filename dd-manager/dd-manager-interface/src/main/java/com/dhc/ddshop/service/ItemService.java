@@ -1,5 +1,6 @@
 package com.dhc.ddshop.service;
 
+import com.dhc.ddshop.common.dto.Order;
 import com.dhc.ddshop.common.dto.Page;
 import com.dhc.ddshop.common.dto.Result;
 import com.dhc.ddshop.pojo.po.TbItem;
@@ -19,7 +20,7 @@ public interface ItemService {
      * @param page
      * @return
      */
-    Result<TbItemCustom> listItemsByPage(Page page);
+    Result<TbItemCustom> listItemsByPage(Page page,Order order);
 
     /**
      * 批量删除

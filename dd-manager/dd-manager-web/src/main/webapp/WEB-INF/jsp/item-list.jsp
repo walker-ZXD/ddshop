@@ -152,6 +152,8 @@
 
     //初始化数据表格
     $('#dg').datagrid({
+        //允许多列排序
+        multiSort:true,
         //将工具栏添加到数据表格中
         toolbar: toolbar,
         //请求远程服务器上的URL http://localhost:8080/ddshop/items
@@ -172,8 +174,8 @@
         columns: [[
             //field title width列属性
             {field: 'ck', checkbox: true},
-            {field: 'id', title: '商品编号', width: 100},
-            {field: 'title', title: '商品名称', width: 100},
+            {field: 'id', title: '商品编号', width: 100,sortable:true},
+            {field: 'title', title: '商品名称', width: 100,sortable:true},
             {field: 'sellPoint', title: '卖点', width: 100},
             {field: 'statusName', title: '状态', width: 100},
             {field: 'catName', title: '分类名称', width: 100},

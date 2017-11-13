@@ -1,5 +1,6 @@
 package com.dhc.ddshop.web;
 
+import com.dhc.ddshop.common.dto.Order;
 import com.dhc.ddshop.common.dto.Page;
 import com.dhc.ddshop.common.dto.Result;
 import com.dhc.ddshop.pojo.po.TbItem;
@@ -51,11 +52,11 @@ public class ItemAction {
 //    }
 
     @ResponseBody
-    @RequestMapping("/items")
-    public Result<TbItemCustom> listItemsByPage(Page page){
+    @RequestMapping(value = "/items")
+    public Result<TbItemCustom> listItemsByPage(Page page, Order order){
         Result<TbItemCustom> list = null;
         try {
-            list = itemService.listItemsByPage(page);
+            list = itemService.listItemsByPage(page,order);
         }catch (Exception e) {
             logger.error(e.getMessage(), e);
             e.printStackTrace();

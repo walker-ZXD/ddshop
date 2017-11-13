@@ -19,16 +19,24 @@
     from tb_item
      WHERE status != 3
   </select>
-
-  <select id="listItemsByPage" parameterType="com.dhc.ddshop.common.dto.Page" resultType="com.dhc.ddshop.pojo.vo.TbItemCustom">
+  ORDER BY CONVERT(i.title USING gbk);
+  <select id="listItemsByPage" resultType="com.dhc.ddshop.pojo.vo.TbItemCustom">
     SELECT
     <include refid="Base_Column_List" />
     FROM tb_item i
-    LEFT JOIN tb_item_cat c
-    ON i.cid = c.id
-    WHERE i.status != 3
-    ORDER BY i.id DESC
-    LIMIT #{offset},#{rows}
+    LEFT JOIN tb_item_cat c ON i.cid = c.id
+    where i.status != 3
+    <choose>
+      <when test="order != null and order.sort != null and order.order != null and order.orderParams != null">
+        <foreach collection="order.orderParams" item="item" open="order by " close="" separator=",">
+          CONVERT(i.${item} USING gbk)
+        </foreach>
+      </when>
+      <otherwise>
+        ORDER BY i.id DESC
+      </otherwise>
+    </choose>
+    LIMIT #{page.offset},#{page.rows}
   </select>
 
 </mapper>
