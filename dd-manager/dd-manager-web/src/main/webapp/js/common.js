@@ -26,7 +26,14 @@ var ddshop = {
         }
 
 
+    },
+
+    closeTabs:function(title) {
+        $('#tab').tabs('close', title)
     }
+
+
+
 
 };
 

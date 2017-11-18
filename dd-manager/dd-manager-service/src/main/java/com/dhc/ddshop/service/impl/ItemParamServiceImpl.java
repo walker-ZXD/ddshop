@@ -3,6 +3,9 @@ package com.dhc.ddshop.service.impl;
 import com.dhc.ddshop.common.dto.Page;
 import com.dhc.ddshop.common.dto.Result;
 import com.dhc.ddshop.dao.TbItemParamCustomMapper;
+import com.dhc.ddshop.dao.TbItemParamMapper;
+import com.dhc.ddshop.pojo.po.TbItemParam;
+import com.dhc.ddshop.pojo.po.TbItemParamExample;
 import com.dhc.ddshop.pojo.vo.TbItemParamCustom;
 import com.dhc.ddshop.service.ItemParamService;
 import org.slf4j.Logger;
@@ -27,6 +30,9 @@ public class ItemParamServiceImpl implements ItemParamService {
 
     @Autowired
     private TbItemParamCustomMapper itemParamCustomDao;
+    @Autowired
+    private TbItemParamMapper itemParamDao;
+
 
     @Override
     public Result<TbItemParamCustom> listItemParamsByPage(Page page) {
@@ -47,5 +53,25 @@ public class ItemParamServiceImpl implements ItemParamService {
             e.printStackTrace();
         }
         return result;
+    }
+
+    @Override
+    public TbItemParam getItemParamByCid(Long cid) {
+        TbItemParam tbItemParam = null;
+        try {
+            //创建查询模板
+            TbItemParamExample example = new TbItemParamExample();
+            TbItemParamExample.Criteria criteria = example.createCriteria();
+            criteria.andItemCatIdEqualTo(cid);
+            //执行查询
+            List<TbItemParam> list = itemParamDao.selectByExampleWithBLOBs(example);
+            if(list != null && list.size() > 0){
+                tbItemParam = list.get(0);
+            }
+        }catch (Exception e){
+            logger.error(e.getMessage(), e);
+            e.printStackTrace();
+        }
+        return tbItemParam;
     }
 }
