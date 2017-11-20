@@ -71,5 +71,17 @@
 <script>
     ddshop.registerMenuEvent();
 </script>
+
+<%--解决多图上传出现“http请求错误”——405错误--%>
+<script>
+    UE.Editor.prototype._bkGetActionUrl = UE.Editor.prototype.getActionUrl;
+    UE.Editor.prototype.getActionUrl = function(action) {
+        if (action == 'uploadimage') {
+            return 'http://localhost:8080/ddshop/file/upload';
+        }else {
+            return this._bkGetActionUrl.call(this, action);
+        }
+    }
+</script>
 </body>
 </html>

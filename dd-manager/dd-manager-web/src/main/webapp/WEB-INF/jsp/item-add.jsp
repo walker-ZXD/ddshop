@@ -139,10 +139,13 @@
     //初始化之前删除原有容器
     UE.delEditor('container');
 
-    //实例化编辑器
+    //实例化富文本编辑器
+    //get请求
+    //可以初始化修改ueditor.config.js的属性
     var ue = UE.getEditor('container',{
         initialFrameWidth: '100%',
-        initialFrameHeight: '400'
+        initialFrameHeight: '300',
+        serverUrl:'file/upload'
     });
 
 
